@@ -1,9 +1,14 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Test</title><base href="/"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/x-icon" href="favicon.ico"><link href="styles.d41d8cd98f00b204e980.bundle.css" rel="stylesheet"/></head><body><button type="button" onsubmit="false" onclick="show()">Klik</button><app-root id="app-root"></app-root><script>const app=document.getElementById("app-root");
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Test</title><base href="/"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/x-icon" href="favicon.ico"><link href="styles.d41d8cd98f00b204e980.bundle.css" rel="stylesheet"/></head><body><app-root id="app-root"></app-root><script>const app=document.getElementById("app-root");
 
      function show() {
-      //console.log("SHOW");
-      //setJwt();
-      const id = String.fromCharCode(Math.floor(Math.random()*26) + 97);//document.getElementById("idInput").value;
-      //console.log(id);
-      app.show();
-    }</script><script type="text/javascript" src="inline.e3d22ea2deaa097757fd.bundle.js"></script><script type="text/javascript" src="polyfills.1553fdd8173a081c720c.bundle.js"></script><script type="text/javascript" src="vendor.fd573dc8ddf6ad07fe6a.bundle.js"></script><script type="text/javascript" src="main.3bf7e280e928cae1cff8.bundle.js"></script></body></html>
+      const id = String.fromCharCode(Math.floor(Math.random()*26) + 97);
+      app.show(id);
+    }
+
+
+    function change(event){
+      JSInterface.ChangeText(event.detail);
+    }
+
+    //var lala = document.getElementById("input");
+    app.addEventListener("change", (event) => change(event));</script><script type="text/javascript" src="inline.3655ca3e74102f690271.bundle.js"></script><script type="text/javascript" src="polyfills.1553fdd8173a081c720c.bundle.js"></script><script type="text/javascript" src="vendor.fd573dc8ddf6ad07fe6a.bundle.js"></script><script type="text/javascript" src="main.f5b4c5ca4f00db98388e.bundle.js"></script></body></html>
